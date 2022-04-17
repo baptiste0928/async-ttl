@@ -147,6 +147,7 @@ impl<K> EntryExpire<K> {
 /// to ensure expired keys are removed.
 ///
 /// See the [crate] documentation to learn more.
+#[derive(Debug, Clone)]
 pub struct AsyncTtlExpireTask<T, K, V>
 where
     T: CacheMap<K, V> + Default,
